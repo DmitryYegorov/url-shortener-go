@@ -53,6 +53,7 @@ func main() {
 		}))
 
 		r.Post("/", save.New(log, storage))
+		//TODO: add DELETE handler
 	})
 
 	router.Get("/{alias}", redirect.New(log, storage))
